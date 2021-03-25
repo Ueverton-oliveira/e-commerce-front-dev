@@ -2,8 +2,11 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+toast.configure()
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
