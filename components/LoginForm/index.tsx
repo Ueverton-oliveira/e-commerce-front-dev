@@ -6,7 +6,7 @@ import User from '../../dtos/User';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
-import { setLoggedUser } from '../../store/modules/auth/';
+import { setLoggedUser } from '../../store/modules/auth/reducer';
 import UsersService from '../../services/user';
 import { toast } from 'react-toastify';
 import Link from 'next/link';
@@ -54,8 +54,8 @@ const LoginForm: React.FC<LoginProps> = ({ titlePhrase, buttonPhrase }) => {
 
   return (
     <Row>
-      <form onSubmit={handleSubmit}>
-        <Col lg={{ span: 6, offset: 3 }} md={{ span: 8, offset: 2 }}>
+      <Col lg={{ span: 6, offset: 3 }} md={{ span: 8, offset: 2 }}>
+        <form onSubmit={handleSubmit}>
           <BlueBackground>
             <h4>{ titlePhrase }</h4>
 
@@ -91,8 +91,8 @@ const LoginForm: React.FC<LoginProps> = ({ titlePhrase, buttonPhrase }) => {
             <Link href="/Auth/PasswordRecovery">Esqueci minha senha</Link> 
             <br />
           </BlueBackground>
-        </Col>
-      </form>
+        </form>
+      </Col>
     </Row>
   )
 }
