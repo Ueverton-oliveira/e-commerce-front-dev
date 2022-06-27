@@ -1,0 +1,13 @@
+.carousel {
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.carousel_image {
+  max-height: 499.5px;
+}
+
+.carousel_item {
+  cursor: pointer;
+}
